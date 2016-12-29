@@ -1,13 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -27,7 +22,7 @@ namespace WindowsFormsApplication1
             string userTime = time.ToString("yyyy-MM-dd HH:mm:ss");
 
             string actionUrl = "http://host-image.hol.es/image-upload.php";
-            string imageName = "desk_app_" + System.Environment.MachineName + ".png"; //RandomString(8)
+            string imageName = "desk_app_" + System.Environment.MachineName + ".png";
 
             using (var client = new HttpClient())
             using (MemoryStream postStream = new MemoryStream(postStreamImageArray))
@@ -40,6 +35,7 @@ namespace WindowsFormsApplication1
 
                 var response = client.PostAsync(actionUrl, formData);
                 var responseString = await response.Result.Content.ReadAsStringAsync();
+
                 dynamic responseJson = JsonConvert.DeserializeObject(responseString);
                 String errorMessage = responseJson.error_message;
                 String responseUrl = responseJson.image_url;

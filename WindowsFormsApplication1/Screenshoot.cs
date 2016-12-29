@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -117,7 +109,7 @@ namespace WindowsFormsApplication1
                 String cropTempPictureName = "desk_app_" + Upload.imageNumberName + ".png"; //RandomString(4)
                 cropedImage.Save(Form1.destinationForCropedImage + "\\" + cropTempPictureName);
                 Upload.imageNumberName ++;
-                MessageBox.Show("Croped picture is saved at: " + 
+                MessageBox.Show("Cropped picture is saved at: " + 
                                  Form1.destinationForCropedImage +  "\\" + cropTempPictureName);
             }else
             {
