@@ -59,7 +59,7 @@ namespace SnippTool
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (this.radioButton1.Checked || this.radioButton2.Checked)
+            if (this.CropAndUpload.Checked || this.CropAndSaveToComputer.Checked)
             {
                 Screenshoot screenShootForm = new Screenshoot();
                 this.Opacity = 0;
@@ -67,7 +67,7 @@ namespace SnippTool
                 screenShootForm.Show();
 
             }
-            else if (this.radioButton3.Checked)
+            else if (this.UploadMyImage.Checked)
             {
                 byte[] fileArray = File.ReadAllBytes(pathToTheFile);
                 Upload upload = new Upload();
@@ -106,19 +106,19 @@ namespace SnippTool
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (this.radioButton2.Checked)
+            if (this.CropAndSaveToComputer.Checked)
             {
-                if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+                if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
-                    textBox1.Text = folderBrowserDialog1.SelectedPath;
+                    textBox1.Text = folderBrowserDialog.SelectedPath;
                     destinationForCropedImage = textBox1.Text;
                 }
             }
-            else if (this.radioButton3.Checked)
+            else if (this.UploadMyImage.Checked)
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    textBox1.Text = openFileDialog1.FileName;
+                    textBox1.Text = openFileDialog.FileName;
                     pathToTheFile = textBox1.Text;
                 }
             }
@@ -134,7 +134,7 @@ namespace SnippTool
 
         public bool getRadioCheck2()
         {
-            return this.radioButton2.Checked;
+            return this.CropAndSaveToComputer.Checked;
         }
 
     }

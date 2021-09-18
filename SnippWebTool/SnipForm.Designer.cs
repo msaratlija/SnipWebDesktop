@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SnipForm));
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.CropAndUpload = new System.Windows.Forms.RadioButton();
+            this.CropAndSaveToComputer = new System.Windows.Forms.RadioButton();
+            this.UploadMyImage = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BrowseBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,43 +57,43 @@
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(24, 12);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(139, 24);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Crop And Upload";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
+            this.CropAndUpload.AutoSize = true;
+            this.CropAndUpload.Checked = true;
+            this.CropAndUpload.Location = new System.Drawing.Point(24, 12);
+            this.CropAndUpload.Name = "radioButton1";
+            this.CropAndUpload.Size = new System.Drawing.Size(139, 24);
+            this.CropAndUpload.TabIndex = 2;
+            this.CropAndUpload.TabStop = true;
+            this.CropAndUpload.Text = "Crop And Upload";
+            this.CropAndUpload.UseVisualStyleBackColor = true;
+            this.CropAndUpload.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(24, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(217, 24);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.Text = "Crop And Save To Computer";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
+            this.CropAndSaveToComputer.AutoSize = true;
+            this.CropAndSaveToComputer.Location = new System.Drawing.Point(24, 42);
+            this.CropAndSaveToComputer.Name = "radioButton2";
+            this.CropAndSaveToComputer.Size = new System.Drawing.Size(217, 24);
+            this.CropAndSaveToComputer.TabIndex = 3;
+            this.CropAndSaveToComputer.Text = "Crop And Save To Computer";
+            this.CropAndSaveToComputer.UseVisualStyleBackColor = true;
+            this.CropAndSaveToComputer.Click += new System.EventHandler(this.radioButton2_Click);
             // 
             // radioButton3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(24, 72);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(142, 24);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.Text = "Upload My Image";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            this.radioButton3.Click += new System.EventHandler(this.radioButton3_Click);
+            this.UploadMyImage.AutoSize = true;
+            this.UploadMyImage.Location = new System.Drawing.Point(24, 72);
+            this.UploadMyImage.Name = "radioButton3";
+            this.UploadMyImage.Size = new System.Drawing.Size(142, 24);
+            this.UploadMyImage.TabIndex = 4;
+            this.UploadMyImage.Text = "Upload My Image";
+            this.UploadMyImage.UseVisualStyleBackColor = true;
+            this.UploadMyImage.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.UploadMyImage.Click += new System.EventHandler(this.radioButton3_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.BrowseBtn);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(12, 102);
@@ -103,14 +103,14 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button3.Location = new System.Drawing.Point(285, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 34);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Browse";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BrowseBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BrowseBtn.Location = new System.Drawing.Point(285, 16);
+            this.BrowseBtn.Name = "button3";
+            this.BrowseBtn.Size = new System.Drawing.Size(89, 34);
+            this.BrowseBtn.TabIndex = 1;
+            this.BrowseBtn.Text = "Browse";
+            this.BrowseBtn.UseVisualStyleBackColor = false;
+            this.BrowseBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 
@@ -130,9 +130,9 @@
             this.ClientSize = new System.Drawing.Size(411, 222);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.UploadMyImage);
+            this.Controls.Add(this.CropAndSaveToComputer);
+            this.Controls.Add(this.CropAndUpload);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -151,14 +151,14 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton CropAndUpload;
+        private System.Windows.Forms.RadioButton CropAndSaveToComputer;
+        private System.Windows.Forms.RadioButton UploadMyImage;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BrowseBtn;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
