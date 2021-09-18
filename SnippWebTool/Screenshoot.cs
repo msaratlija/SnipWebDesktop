@@ -39,7 +39,6 @@ namespace SnippTool
             draw = false;
         }
 
-
         private void Screenshoot_Load(object sender, EventArgs e)
         {
             draw = false;
@@ -58,10 +57,7 @@ namespace SnippTool
             }
 
             SnipForm.InstanceForm1.Opacity = 1;
-            
         }
-
-
 
         //Exit Screenshot form with ESC key
         private void Screenshoot_KeyDown(object sender, KeyEventArgs e)
@@ -73,7 +69,6 @@ namespace SnippTool
             }
         }
 
-        
         //Aquire of the current point on left mouse click
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -85,8 +80,6 @@ namespace SnippTool
                     draw = true;
             }
         }
-
-        
 
         //Check if mouse is down and being draged, then draw rectangle
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -116,7 +109,6 @@ namespace SnippTool
                 Upload uploadImage = new Upload();
                 uploadImage.UploadImageWithPost(postStreamImageArray);
             }
-
 
             pictureBox1.Invalidate();
             this.Close();
