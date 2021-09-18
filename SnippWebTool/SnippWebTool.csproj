@@ -62,7 +62,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>Config\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -84,21 +84,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Upload.cs" />
-    <Compile Include="SnipForm.cs">
+    <Compile Include="Forms\SnipForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SnipForm.Designer.cs">
+    <Compile Include="Forms\SnipForm.Designer.cs">
       <DependentUpon>SnipForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screenshoot.cs">
+    <Compile Include="Forms\Screenshoot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screenshoot.Designer.cs">
+    <Compile Include="Forms\Screenshoot.Designer.cs">
       <DependentUpon>Screenshoot.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SnipForm.resx">
+    <EmbeddedResource Include="Forms\SnipForm.resx">
       <DependentUpon>SnipForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -110,10 +110,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Screenshoot.resx">
+    <EmbeddedResource Include="Forms\Screenshoot.resx">
       <DependentUpon>Screenshoot.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="Config\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,7 +126,7 @@
     <None Include="WindowsFormsApplication1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Config\App.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -141,7 +141,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <Content Include="Config\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
