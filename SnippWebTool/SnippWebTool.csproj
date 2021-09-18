@@ -7,8 +7,8 @@
     <ProjectGuid>{632FD8D9-D695-4588-9557-7BC182856B63}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication1</RootNamespace>
-    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <RootNamespace>SnippWebTool</RootNamespace>
+    <AssemblyName>SnippWebTool</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -84,11 +84,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Upload.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="SnipForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SnipForm.Designer.cs">
+      <DependentUpon>SnipForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,8 +98,8 @@
     <Compile Include="Screenshoot.Designer.cs">
       <DependentUpon>Screenshoot.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="SnipForm.resx">
+      <DependentUpon>SnipForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

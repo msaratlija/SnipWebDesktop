@@ -4,7 +4,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace SnippTool
 {
     public partial class Screenshoot : Form
     {
@@ -52,12 +52,12 @@ namespace WindowsFormsApplication1
             using (MemoryStream s = new MemoryStream())
             {
                 //Save graphic variable into memory
-                Form1.bitmapScreenshot.Save(s, ImageFormat.Png);
+                SnipForm.bitmapScreenshot.Save(s, ImageFormat.Png);
                 pictureBox1.Size = new System.Drawing.Size(this.Width, this.Height);
                 pictureBox1.Image = Image.FromStream(s);
             }
 
-            Form1.InstanceForm1.Opacity = 1;
+            SnipForm.InstanceForm1.Opacity = 1;
             
         }
 
@@ -104,13 +104,13 @@ namespace WindowsFormsApplication1
         {
             draw = false;
             CropScreenshot();
-            if (Form1.InstanceForm1.getRadioCheck2())
+            if (SnipForm.InstanceForm1.getRadioCheck2())
             {
                 String cropTempPictureName = "desk_app_" + Upload.imageNumberName + ".png"; //RandomString(4)
-                cropedImage.Save(Form1.destinationForCropedImage + "\\" + cropTempPictureName);
+                cropedImage.Save(SnipForm.destinationForCropedImage + "\\" + cropTempPictureName);
                 Upload.imageNumberName ++;
                 MessageBox.Show("Cropped picture is saved at: " + 
-                                 Form1.destinationForCropedImage +  "\\" + cropTempPictureName);
+                                 SnipForm.destinationForCropedImage +  "\\" + cropTempPictureName);
             }else
             {
                 Upload uploadImage = new Upload();
@@ -148,7 +148,7 @@ namespace WindowsFormsApplication1
         //Make crop out of the screenshot
         private void CropScreenshot()
         {
-            cropedImage = new Bitmap(Form1.bitmapScreenshot);
+            cropedImage = new Bitmap(SnipForm.bitmapScreenshot);
             cropedImage = cropedImage.Clone(cropRect, cropedImage.PixelFormat);
             using (MemoryStream s = new MemoryStream())
             {

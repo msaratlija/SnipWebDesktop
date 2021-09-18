@@ -5,7 +5,7 @@ using System.IO;
 using System.Net.Http;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace SnippTool
 {
     class Upload
     {

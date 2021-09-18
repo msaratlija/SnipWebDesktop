@@ -4,18 +4,18 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace SnippTool
 {
-    public partial class Form1 : Form
+    public partial class SnipForm : Form
     {
 
         public static Bitmap bitmapScreenshot;
         public static Graphics graphicsScreenshot;
-        public static Form1 InstanceForm1;
+        public static SnipForm InstanceForm1;
         public static String destinationForCropedImage;
         private String pathToTheFile;
 
-        public Form1()
+        public SnipForm()
         {
             InitializeComponent();
             InstanceForm1 = this;
